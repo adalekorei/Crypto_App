@@ -36,6 +36,12 @@ dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.8.0+1
   get_it: ^8.0.3
+  flutter_bloc: ^9.1.1
+  equatable: ^2.0.7
+  intl: ^0.20.2
+  talker_flutter: ^4.7.9
+  talker_dio_logger: ^4.7.9
+  talker_bloc_logger: ^4.7.9
 
 dev_dependencies:
   flutter_test:
