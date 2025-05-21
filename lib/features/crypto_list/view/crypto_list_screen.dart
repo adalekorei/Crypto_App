@@ -33,7 +33,11 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.of(context).push(MaterialPageRoute(builder: (context) => TalkerScreen(talker: GetIt.I<Talker>())),);
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => TalkerScreen(talker: GetIt.I<Talker>()),
+                ),
+              );
             },
             icon: Icon(Icons.document_scanner_outlined),
           ),
@@ -67,10 +71,12 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
                   children: [
                     Text(
                       'Something went wrong',
-                      style: theme.textTheme.headlineMedium,
+                      style: theme.textTheme.headlineMedium?.copyWith(
+                        color: Colors.white,
+                      ),
                     ),
                     Text(
-                      'Please try againg later',
+                      'Please try again later',
                       style: theme.textTheme.labelSmall?.copyWith(fontSize: 16),
                     ),
                     const SizedBox(height: 30),
@@ -78,7 +84,12 @@ class _CryptoListScreenState extends State<CryptoListScreen> {
                       onPressed: () {
                         _cryptoListBloc.add(LoadCryptoList());
                       },
-                      child: const Text('Try againg'),
+                      child: Text(
+                        'Try again',
+                        style: theme.textTheme.labelMedium?.copyWith(
+                          color: Colors.white,
+                        ),
+                      ),
                     ),
                   ],
                 ),
